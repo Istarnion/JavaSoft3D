@@ -4,7 +4,7 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 
 public class Renderer {
-    public boolean backFaceCulling = false;
+    public boolean backFaceCulling = true;
 
     private PrimitiveType primitive;
     private ArrayList<Vector4> vertices;

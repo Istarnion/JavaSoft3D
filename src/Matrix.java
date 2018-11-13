@@ -27,6 +27,12 @@ public class Matrix {
         f00 = f11 = f22 = f33 = 1.0f;
     }
 
+    public void setScale(float x, float y, float z) {
+        f00 = x;
+        f11 = y;
+        f22 = z;
+    }
+
     // Perform A*v
     public Vector3 mul(Vector3 v) {
         float x = f00 * v.x + f01 * v.y + f02 * v.z;
