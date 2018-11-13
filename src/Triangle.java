@@ -1,7 +1,7 @@
 public class Triangle {
     public Vector4 a, b, c;
 
-    public Triangle(Vector a, Vector b, Vector c) {
+    public Triangle(Vector3 a, Vector3 b, Vector3 c) {
         this.a = new Vector4(a);
         this.b = new Vector4(b);
         this.c = new Vector4(c);

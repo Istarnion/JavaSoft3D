@@ -28,11 +28,11 @@ public class Matrix {
     }
 
     // Perform A*v
-    public Vector mul(Vector v) {
+    public Vector3 mul(Vector3 v) {
         float x = f00 * v.x + f01 * v.y + f02 * v.z;
         float y = f10 * v.x + f11 * v.y + f12 * v.z;
         float z = f20 * v.x + f21 * v.y + f22 * v.z;
-        return new Vector(x, y, z);
+        return new Vector3(x, y, z);
     }
 
     public Vector4 mul(Vector4 v) {

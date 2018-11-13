@@ -8,11 +8,18 @@ public class Vector4 {
         w = 0;
     }
 
-    public Vector4(Vector v) {
+    public Vector4(Vector3 v) {
         x = v.x;
         y = v.y;
         z = v.z;
         w = 0;
+    }
+
+    public Vector4(float x, float y, float z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.w = 0;
     }
 
     public Vector4(float x, float y, float z, float w) {

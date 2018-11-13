@@ -120,7 +120,7 @@ public class Renderer {
         vertices.add(new Vector4(x, y, z, 1));
     }
 
-    public void vertex(Vector v) {
+    public void vertex(Vector3 v) {
         vertices.add(new Vector4(v.x, v.y, v.z, 1));
     }
 }
