@@ -1,6 +1,6 @@
 SOURCES=src/*
 
-build: ${SOURCES} bin/
+build: ${SOURCES}
 	rm -rf bin
 	mkdir bin
 	javac -d bin/ -sourcepath src/ -classpath bin/ ${SOURCES}
