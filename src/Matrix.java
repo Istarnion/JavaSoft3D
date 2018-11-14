@@ -81,5 +81,16 @@ public class Matrix {
 
         return result;
     }
+
+    public static Matrix ortho(float left, float right, float bottom, float top, float zNear, float zFar) {
+        Matrix result = new Matrix();
+        result.f00 =  2.0f / (right - left);
+        result.f11 =  2.0f / (top - bottom);
+        result.f22 = -2.0f / (zFar - zNear);
+        result.f30 = -(right + left) / (right - left);
+        result.f31 = -(top + bottom) / (top - bottom);
+        result.f32 = -(zFar + zNear) / (zFar - zNear);
+        return result;
+    }
 }
 
