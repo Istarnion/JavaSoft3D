@@ -82,9 +82,9 @@ public class Renderer {
             case TRIANGLES:
                 for(int i=0; i<vertices.size()/3; ++i) {
                     Vector4 a, b, c;
-                    a = mvp.mul(vertices.get(3*i+0));
-                    b = mvp.mul(vertices.get(3*i+1));
-                    c = mvp.mul(vertices.get(3*i+2));
+                    a = mvp.transform(vertices.get(3*i+0));
+                    b = mvp.transform(vertices.get(3*i+1));
+                    c = mvp.transform(vertices.get(3*i+2));
                     Triangle tri = new Triangle(a, b, c);
 
                     if(!backFaceCulling || tri.isCCW()) {
@@ -95,13 +95,13 @@ public class Renderer {
             case QUADS:
                 for(int i=0; i<vertices.size()/4; ++i) {
                     Vector4 a, b, c;
-                    a = mvp.mul(vertices.get(4*i+0));
-                    b = mvp.mul(vertices.get(4*i+1));
-                    c = mvp.mul(vertices.get(4*i+2));
+                    a = mvp.transform(vertices.get(4*i+0));
+                    b = mvp.transform(vertices.get(4*i+1));
+                    c = mvp.transform(vertices.get(4*i+2));
                     Triangle tri1 = new Triangle(a, b, c);
-                    a = mvp.mul(vertices.get(4*i+0));
-                    b = mvp.mul(vertices.get(4*i+2));
-                    c = mvp.mul(vertices.get(4*i+3));
+                    a = mvp.transform(vertices.get(4*i+0));
+                    b = mvp.transform(vertices.get(4*i+2));
+                    c = mvp.transform(vertices.get(4*i+3));
                     Triangle tri2 = new Triangle(a, b, c);
 
                     if(!backFaceCulling || (tri1.isCCW() && tri2.isCCW())) {
